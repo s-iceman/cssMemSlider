@@ -38,7 +38,7 @@ html {
   -webkit-appearance: none;
   appearance: none;
   background-color: rgb(36, 39, 189);
-  margin: 0;
+  margin: 0 1rem 0 0;
   font: inherit;
   color: rgb(56, 54, 49);
   width: 1.15rem;
@@ -46,7 +46,10 @@ html {
   border: 0.15em solid rgb(195, 193, 188);
   border-radius: 50%;
   transform: translateY(-0.075em);
-  margin-right: 1rem;
+}
+
+.radio:last-of-type {
+  margin: 0;
 }
 
 .radio:checked {
