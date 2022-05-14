@@ -4,32 +4,38 @@
 
 html {
   font-size: 1.25rem;
+  font-family: 'Nunito', sans-serif;
 }
 
 .wrapper {
-  width: 70%;
-  margin: 4rem auto;
+  user-select: none;
+  max-width: 50rem;
+  width: 60%;
+  margin: 2rem auto auto;
+  background-color: black;
 }
 
 .slider {
+  width: 92%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.slide {
-  display: inline-flex;
+  margin: 4%;
 }
 
 .image {
   width: 100%;
+  margin: 2rem 0 2rem 0;
+  border-radius: 0.5rem;
   order: 1;
 }
 
 .label {
   order: 3;
   margin-right: auto;
+  padding-bottom: 2rem;
   max-width: 70%;
+  color: white;
 }
 
 .radio {
@@ -38,7 +44,7 @@ html {
   -webkit-appearance: none;
   appearance: none;
   background-color: rgb(36, 39, 189);
-  margin: 0 1rem 0 0;
+  margin: 0 1rem 1rem 0;
   font: inherit;
   color: rgb(56, 54, 49);
   width: 1.15rem;
@@ -46,6 +52,10 @@ html {
   border: 0.15em solid rgb(195, 193, 188);
   border-radius: 50%;
   transform: translateY(-0.075em);
+}
+
+.radio:first-of-type {
+  margin-left: 0.5rem;
 }
 
 .radio:last-of-type {
@@ -58,6 +68,7 @@ html {
 
 .radio:hover {
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 4px 8px, rgba(0, 0, 0, 0.09) 0px 3px 16px;
 }
 
 #selected-slide1:checked  ~ 
@@ -106,4 +117,48 @@ html {
 #selected-slide4:checked  ~ 
   .slide4 {
     display: block;
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 1rem;
+  }
+
+  .label {
+    max-width: 65%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  .wrapper {
+    width: 80%;
+  }
+
+  .label {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .label {
+    max-width: 100%;
+    width: 100%;
+    order: 10;
+  }
+
+  .radio:first-of-type {
+    margin-left: 0;
+  }
+
+  .radio:first-of-type {
+    margin-left: auto;
+  }
+
+  .radio:last-of-type {
+    margin-right: auto;
+  }
 }
