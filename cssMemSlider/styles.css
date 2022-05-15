@@ -23,9 +23,12 @@ html {
   margin: 4%;
 }
 
+.img-wrapper {
+  margin: 2rem 0 2rem 0;
+}
+
 .image {
   width: 100%;
-  margin: 2rem 0 2rem 0;
   border-radius: 0.5rem;
   order: 1;
   animation-duration: 2s;
@@ -39,7 +42,7 @@ html {
   max-width: 70%;
   height: 3rem;
   color: white;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-name: text-animate;
   animation-timing-function: ease-in-out;
 }
@@ -49,8 +52,7 @@ html {
   order: 5;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #2762f3;
-  box-shadow: 0 0.1em 0.1em 0 rgba(0,0,0,0.5), 0 0 0.1em 0.1em rgba(0,0,0,0.25) inset;
+  background-color: rgb(117, 59, 224);
   margin: 0 1rem 1rem 0;
   font: inherit;
   width: 1.15rem;
@@ -68,13 +70,22 @@ html {
   margin: 0;
 }
 
-.radio:checked {
-  background: rgb(183, 214, 42);
-}
-
 .radio:hover {
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 4px 8px, rgba(0, 0, 0, 0.09) 0px 3px 16px;
+  border: 0.15rem solid rgb(117, 59, 224);
+  background-color: white;
+}
+
+.radio:active {
+  box-shadow:
+    -0.05rem -0.05rem 0.05rem 0.05rem #ffffff,
+    0.05rem 0.05rem 0.3rem 0.3rem #d1d9e6;
+}
+
+.radio:checked {
+  background: rgb(117, 59, 224);
+  border: 0.2rem solid white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 1.5rem 3rem -1.6rem inset, rgba(0, 0, 0, 0.3) 0 0.9rem 1.8rem -0.9rem inset;
 }
 
 #selected-slide1:checked  ~ 
