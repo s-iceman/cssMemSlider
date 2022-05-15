@@ -28,14 +28,20 @@ html {
   margin: 2rem 0 2rem 0;
   border-radius: 0.5rem;
   order: 1;
+  animation-duration: 2s;
+  animation-name: slide-animate;
+  animation-timing-function: ease-out;
 }
 
 .label {
   order: 3;
   margin-right: auto;
-  padding-bottom: 2rem;
   max-width: 70%;
+  height: 3rem;
   color: white;
+  animation-duration: 2s;
+  animation-name: text-animate;
+  animation-timing-function: ease-in-out;
 }
 
 .radio {
@@ -43,13 +49,13 @@ html {
   order: 5;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgb(36, 39, 189);
+  background-color: #2762f3;
+  box-shadow: 0 0.1em 0.1em 0 rgba(0,0,0,0.5), 0 0 0.1em 0.1em rgba(0,0,0,0.25) inset;
   margin: 0 1rem 1rem 0;
   font: inherit;
-  color: rgb(56, 54, 49);
   width: 1.15rem;
   height: 1.15rem;
-  border: 0.15em solid rgb(195, 193, 188);
+  border: 0.09em solid rgb(195, 193, 188);
   border-radius: 50%;
   transform: translateY(-0.075em);
 }
@@ -119,6 +125,28 @@ html {
     display: block;
 }
 
+@keyframes slide-animate {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes text-animate {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    color: rgb(117, 59, 224);
+  }
+  100% {
+    opacity: 100%;
+    color: white;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   html {
     font-size: 1rem;
@@ -126,6 +154,7 @@ html {
 
   .label {
     max-width: 65%;
+    height: 4rem;
   }
 }
 
